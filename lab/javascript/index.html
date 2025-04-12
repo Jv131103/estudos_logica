@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambiente de Testes - JavaScript</title>
+</head>
+<body>
+    <h1>SAÍDA:</h1>
+    <div id="saida"></div>
+
+    <script src="./ola/ola.js"></script>
+    <script>
+        fetch('./saidas.json')
+            .then(response => response.json())
+            .then(config => {
+                const modo = Object.values(config).findIndex(val => val === 2); // Pega o índice 2 (body_html)
+                const saida = ola_mundo();
+
+                switch (modo) {
+                    case config.alert:
+                        alert(saida);
+                        break;
+                    case config.console:
+                        console.log(saida);
+                        break;
+                    case config.body_html:
+                        document.getElementById('saida').innerText = saida;
+                        break;
+                    default:
+                        console.error("Modo de saída inválido.");
+                }
+            })
+            .catch(error => {
+                console.error("Erro ao carregar o JSON:", error);
+            });
+    </script>
+</body>
+</html>
