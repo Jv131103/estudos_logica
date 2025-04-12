@@ -1,8 +1,5 @@
 #!/bin/bash
 
-usuario="Jv131103"      # Adicione seu nome de usuário do GitHub
-repositorio="estudos_logica"  # Adicione o nome do repositório
-
 # Função para imprimir mensagens coloridas
 print_msg() {
     cor=$1
@@ -15,16 +12,23 @@ print_msg() {
     esac
 }
 
-# Verifica se usuário e repositório foram preenchidos
+print_msg amarelo "Acessando git e gerando no GitHub..."
+print_msg amarelo "NAO EQUEÇA DE GERAR SEU REPOSITORIO NO GITHUB TAMBEM..."
+
+# Solicita usuário e repositório
+read -p "Digite seu nome de usuario do GitHub: " usuario
+read -p "Digite o nome do repositorio: " repositorio
+
+# Verifica se os campos foram preenchidos
 if [ -z "$usuario" ] || [ -z "$repositorio" ]; then
-    print_msg vermelho "Erro: Preencha as variáveis 'usuario' e 'repositorio' antes de executar o script."
+    print_msg vermelho "Erro: Os campos 'usuario' e 'repositorio' são obrigatorios."
     exit 1
 fi
 
 # Iniciar repositório Git
 print_msg amarelo "Iniciando git init..."
-git init || { print_msg vermelho "Erro ao iniciar repositório."; exit 1; }
-print_msg verde "Repositório Git iniciado com sucesso!"
+git init || { print_msg vermelho "Erro ao iniciar repositorio."; exit 1; }
+print_msg verde "Repositorio Git iniciado com sucesso!"
 
 # Adicionar arquivos e fazer commit
 print_msg amarelo "Adicionando arquivos e realizando commit..."
@@ -34,11 +38,11 @@ git add . && git commit -m "feat/initial_project" || {
 print_msg verde "Arquivos adicionados e commit realizado com sucesso!"
 
 # Adicionar repositório remoto
-print_msg amarelo "Adicionando repositório remoto..."
+print_msg amarelo "Adicionando repositorio remoto..."
 git remote add origin https://github.com/$usuario/$repositorio.git || {
     print_msg vermelho "Erro ao adicionar repositório remoto."; exit 1;
 }
-print_msg verde "Repositório remoto configurado com sucesso!"
+print_msg verde "Repositorio remoto configurado com sucesso!"
 
 # Enviar para o GitHub (forçando push)
 print_msg amarelo "Enviando para o GitHub..."
