@@ -1,0 +1,93 @@
+{
+    // Habilita a exibição de informações ao passar o mouse sobre elementos do código
+    "editor.hover.enabled": true,
+    
+    // Define que nenhum editor será aberto automaticamente ao iniciar o VS Code
+    "workbench.startupEditor": "none",
+    
+    // Impede que pastas sejam agrupadas de forma compacta no Explorer
+    "explorer.compactFolders": false,
+    
+    // Adiciona réguas visuais no editor para indicar limites de comprimento de linha
+    "editor.rulers": [80, 120],
+    
+    // Define o tema de cores do VS Code
+    "workbench.colorTheme": "OM Theme (Night Owl Italic)",
+    
+    // Define o tema de ícones para a interface
+    "workbench.iconTheme": "material-icon-theme",
+    
+    // Define como o Code Runner executará scripts Python no terminal
+    "code-runner.executorMap": {
+        "python": "clear ; python -u"
+    },
+    
+    // Faz o Code Runner rodar os scripts diretamente no terminal em vez da saída padrão
+    "code-runner.runInTerminal": true,
+    
+    // Faz com que o Code Runner ignore seleções e execute o arquivo inteiro
+    "code-runner.ignoreSelection": true,
+    
+    // Define a família de fontes utilizada no editor
+    "editor.fontFamily": "'Fira Code', Consolas, 'Dank Mono', 'Source Code Pro', 'Fira Code', Menlo, 'Inconsolata', 'Droid Sans Mono', 'DejaVu Sans Mono', 'Ubuntu Mono', 'Courier New', Courier, Monaco, monospace",
+    
+    // Define a família de fontes utilizada no terminal integrado
+    "terminal.integrated.fontFamily": "",
+    
+    // Desativa ligaduras de fonte no editor
+    "editor.fontLigatures": false,
+    
+    // Configurações específicas para arquivos Python
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python", // Define o formatador padrão
+        "editor.tabSize": 4, // Define tamanho do tab para Python
+        "editor.insertSpaces": true, // Converte tab em espaços
+        "editor.formatOnSave": true, // Formata o código automaticamente ao salvar
+        "editor.codeActionsOnSave": [
+            "source.fixAll", // Corrige problemas detectados
+            "source.fixAll.unusedImports", // Remove imports não utilizados
+            "source.organizeImports" // Organiza a ordem dos imports
+        ]
+    },
+    
+    // Define o servidor de linguagem para Python
+    "python.languageServer": "Pylance",
+    
+    // Argumentos para o formatador autopep8
+    "python.formatting.autopep8Args": [
+        "--indent-size=4", // Define indentação de 4 espaços
+        "--max-line-length=80" // Define comprimento máximo de linha
+    ],
+    
+    // Configuração de linting com Flake8
+    "python.linting.flake8Args": [],
+    "python.linting.flake8Enabled": true, // Habilita Flake8
+    
+    // Habilita o MyPy para verificação de tipos
+    "python.linting.mypyEnabled": true,
+    
+    // Configuração dos testes para Python
+    "python.testing.unittestEnabled": false, // Desativa unittest
+    "python.testing.pytestEnabled": true, // Habilita pytest
+    
+    // Ajusta severidade de diagnósticos de análise de código para Python
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportUnknownMemberType": "none",
+        "reportUnknownArgumentType": "none",
+        "reportUnknownVariableType": "none",
+        "reportUnknownLambdaType": "none",
+        "reportUnknownParameterType": "none"
+    },
+    
+    // Define o modo de verificação de tipos como básico
+    "python.analysis.typeCheckingMode": "basic",
+    
+    // Habilita o corretor ortográfico no VS Code
+    "cSpell.enabled": true,
+    
+    // Ajusta o nível de zoom da interface do VS Code
+    "window.zoomLevel": 1,
+    
+    // Define o nível de indentação dos itens na árvore do Explorer
+    "workbench.tree.indent": 20
+}
