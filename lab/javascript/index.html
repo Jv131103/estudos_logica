@@ -9,14 +9,16 @@
     <h1>SAÍDA:</h1>
     <div id="saida"></div>
 
-    <script src="./ola/ola.js"></script>
+    <script src="./soma_todos_os_10/soma_todos_10.js"></script>
     <script>
         fetch('./saidas.json')
             .then(response => response.json())
             .then(config => {
-                const modo = Object.values(config).findIndex(val => val === 2); // Pega o índice 2 (body_html)
-                const saida = ola_mundo();
-
+                const modo = Object.values(config).findIndex(val => val === 2); // body_html
+    
+                // Executa um modelo fixo (ex: modelo1)
+                const saida = window.modelo1(); 
+    
                 switch (modo) {
                     case config.alert:
                         alert(saida);
