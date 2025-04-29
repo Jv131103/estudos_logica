@@ -12,4 +12,10 @@ function soma_10_primeiros_modelo_gaus(){
 }
 
 // window.modelo1 = soma_10_primeiros;
-window.modelo1 = soma_10_primeiros_modelo_gaus;
+// window.modelo1 = soma_10_primeiros_modelo_gaus;
+
+soma1 = soma_10_primeiros()
+console.log(soma1)
+
+soma2 = soma_10_primeiros_modelo_gaus()
+console.log(soma2)
