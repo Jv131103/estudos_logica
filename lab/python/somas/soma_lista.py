@@ -1,13 +1,12 @@
 def retornar_soma_linear(lista):
-	soma = 0
-	for valor in lista:
-		soma += valor
-
-	return soma
+    soma = 0
+    for valor in lista:
+        soma += valor
+    return soma
 
 
 def retornar_soma_pa(lista):
-	return (len(lista) / 2) * (lista[0] + lista[-1])
+    return (len(lista) / 2) * (lista[0] + lista[-1])
 
 
 def soma_recursiva(lista, i=0):
