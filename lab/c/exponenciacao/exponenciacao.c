@@ -1,6 +1,14 @@
 #include <stdio.h>
 #include <math.h>
 
+/*
+    PS: O compilador gcc compila o código, mas o linkador (ld) 
+    precisa saber que deve usar a biblioteca matemática.
+    
+    -lm diz ao ld para ligar com a libm (math library), onde 
+    está a função pow.
+*/
+// Para rodar com a lib: gcc exponenciacao.c -lm
 
 int variante1(int valor, int expoente) {
     int contador = 1;
