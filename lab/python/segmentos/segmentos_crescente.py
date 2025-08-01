@@ -25,3 +25,4 @@ def contar_segmentos_ordem_crescente(*numeros):
 print(contar_segmentos_ordem_crescente(5, 10, 3, 2, 4, 7, 9, 8, 5))
 print(contar_segmentos_ordem_crescente(10, 8, 7, 5, 2))
 print(contar_segmentos_ordem_crescente(1, 2, 3, 4, 5))
+print(contar_segmentos_ordem_crescente(2, 2, 3, 4, 5))

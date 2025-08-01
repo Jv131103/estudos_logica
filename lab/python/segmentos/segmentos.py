@@ -14,3 +14,4 @@ def contar_segmentos(*numeros):
 
 
 print(contar_segmentos(5, 2, 2, 3, 4, 4, 4, 4, 1, 1))  # saída esperada: 5
+print(contar_segmentos(2, 2, 2, 3, 4, 4, 4, 4, 1, 1))  # saída esperada: 5
