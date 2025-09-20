@@ -7,15 +7,20 @@ def calculadora_simples(n1, n2, operador):
         return n1 * n2
     elif operador == "**":
         return n1**n2
-    else:
+    elif operador == '/':
         if n2 == 0:
             raise ZeroDivisionError('Erro de divisão por 0')
-        if operador == "/":
-            return n1 / n2
-        elif operador == "//":
-            return n1 // n2
-        elif operador == "%":
-            return n1 % n2
+        return n1 / n2
+    elif operador == "//":
+        if n2 == 0:
+            raise ZeroDivisionError('Erro de divisão por 0')
+        return n1 // n2
+    elif operador == "%":
+        if n2 == 0:
+            raise ZeroDivisionError('Erro de divisão por 0')
+        return n1 % n2
+    else:
+        raise ValueError("Operador inválido")
 
 
 calculos = [
