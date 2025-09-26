@@ -3,7 +3,7 @@ def notas(valor):
 
     for nota in valores:
         qtd = valor // nota
-        print(f"{qtd} nota(s) de {nota}")
+        print(f"{qtd} nota(s) de R$ {nota},00")
         valor %= nota
 
 
