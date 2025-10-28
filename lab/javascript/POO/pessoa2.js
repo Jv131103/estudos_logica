@@ -7,7 +7,12 @@ class Pessoa{
     info(){
         return `Nome: ${this.nome}, Idade: ${this.idade}`;
     }
+
+    apresentar(){
+        console.log(`Olá meu nome é ${self.nome}`);
+    }
 }
 
 p = new Pessoa("João", 21)
 console.log(p.info())
+p.apresentar()

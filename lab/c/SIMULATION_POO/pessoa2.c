@@ -11,6 +11,10 @@ void info(Pessoa p) {
     printf("Nome: %s, Idade: %d\n", p.nome, p.idade);
 }
 
+void apresentar(Pessoa p) {
+    printf("Olá, meu nome é %s\n", p.nome);
+}
+
 int main() {
     Pessoa pessoa1;
     // Definindo os atributos da pessoa
@@ -19,6 +23,9 @@ int main() {
 
     // informação da pessoa
     info(pessoa1);
+
+    // apresentar a pessoa
+    apresentar(pessoa1);
 
     return 0;
 }
